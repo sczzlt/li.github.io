@@ -27,11 +27,9 @@
 <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/2.1.4/jquery.min.js"></script>
 <script>
 
-const url = window.location.search;
-const paramsString = url.substring(1); 
-const params = new URLSearchParams(paramsString);
-const id = params.get('id');
-
+ var url = window.document.location.href.toString();
+  var u = url.split("?");
+  var id = u[1].replace("=", "");
 
 if (id) {
   // 构建API请求URL
