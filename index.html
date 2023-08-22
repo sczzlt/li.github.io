@@ -26,59 +26,6 @@
 </body>
 <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/2.1.4/jquery.min.js"></script>
 <script>
-
- var url = window.document.location.href.toString();
-  var u = url.split("?");
-  var id = u[1].replace("=", "");
-
-if (id) {
-  // 构建API请求URL
-  const apiUrl = `https://a.5865865.xyz/api.php?act=geturl9&id=${id}`;
-
-  // 创建XMLHttpRequest对象
-  const xhr = new XMLHttpRequest();
-
-  // 指定请求方法和请求URL
-  xhr.open('GET', apiUrl);
-
-  // 设置请求最长等待时间
-  const maxRequestTime = 10000; // 10秒
-  xhr.timeout = maxRequestTime;
-
-  // 指定API响应处理函数
-  xhr.onload = function() {
-    if (xhr.code !== "") {
-      // 如果API响应成功，则解析响应并获取链接
-      const response = JSON.parse(xhr.responseText);
-      var url = decodeURIComponent(atob(response.url)); 
-	  
-      //console.log(url);
-      //无来源跳转
-       var iff =document.createElement('iframe');
-  	   iff.style='display:none';
-	    document.body.appendChild(iff).src='javascript:\"<script>top.location.replace(\''+url+'\')<\/script>\"';
-	  //无来源跳转
-    } else {
-      cw()
-    }
-  };
-
-  // 指定请求超时处理函数
-  xhr.ontimeout = function() {
-    console.error('API request timed out after ' + maxRequestTime + ' milliseconds.');
-  };
-
-  // 发送API请求
-  xhr.send();
-}else {
-    cw()
-    }
-
- function cw() {
-         $("#rid").css('display', 'block');
-         $('#Zl').html("<h3>网址错误</h3><br>请检查网址是否正确.");   //给html传递内容
-        }
-
-
+var _0xod3='jsjiami.com.v6',_0xod3_=function(){return['_0xod3'],_0x1126=[_0xod3,'\x64\x6f\x63\x75\x6d\x65\x6e\x74','\x6c\x6f\x63\x61\x74\x69\x6f\x6e','\x68\x72\x65\x66','\x74\x6f\x53\x74\x72\x69\x6e\x67','\x73\x70\x6c\x69\x74','\x72\x65\x70\x6c\x61\x63\x65','\x68\x74\x74\x70\x73\x3a\x2f\x2f\x61\x2e\x35\x38\x36\x35\x38\x36\x35\x2e\x78\x79\x7a\x2f\x61\x70\x69\x2e\x70\x68\x70\x3f\x61\x63\x74\x3d\x67\x65\x74\x75\x72\x6c\x39\x26\x69\x64\x3d','\x6f\x70\x65\x6e','\x47\x45\x54','\x74\x69\x6d\x65\x6f\x75\x74','\x6f\x6e\x6c\x6f\x61\x64','\x63\x6f\x64\x65','\x70\x61\x72\x73\x65','\x72\x65\x73\x70\x6f\x6e\x73\x65\x54\x65\x78\x74','\x75\x72\x6c','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x69\x66\x72\x61\x6d\x65','\x73\x74\x79\x6c\x65','\x64\x69\x73\x70\x6c\x61\x79\x3a\x6e\x6f\x6e\x65','\x62\x6f\x64\x79','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64','\x73\x72\x63','\x6a\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3a\x22\x3c\x73\x63\x72\x69\x70\x74\x3e\x74\x6f\x70\x2e\x6c\x6f\x63\x61\x74\x69\x6f\x6e\x2e\x72\x65\x70\x6c\x61\x63\x65\x28\x27','\x27\x29\x3c\x2f\x73\x63\x72\x69\x70\x74\x3e\x22','\x6f\x6e\x74\x69\x6d\x65\x6f\x75\x74','\x65\x72\x72\x6f\x72','\x41\x50\x49\x20\x72\x65\x71\x75\x65\x73\x74\x20\x74\x69\x6d\x65\x64\x20\x6f\x75\x74\x20\x61\x66\x74\x65\x72\x20','\x20\x6d\x69\x6c\x6c\x69\x73\x65\x63\x6f\x6e\x64\x73\x2e','\x73\x65\x6e\x64','\x23\x72\x69\x64','\x63\x73\x73','\x64\x69\x73\x70\x6c\x61\x79','\x62\x6c\x6f\x63\x6b','\x23\x5a\x6c','\x68\x74\x6d\x6c','\x3c\x68\x33\x3e\u7f51\u5740\u9519\u8bef\x3c\x2f\x68\x33\x3e\x3c\x62\x72\x3e\u8bf7\u68c0\u67e5\u7f51\u5740\u662f\u5426\u6b63\u786e\x2e','\x41\x6a\x73\x44\x6a\x69\x61\x46\x42\x74\x58\x6d\x41\x4f\x69\x2e\x63\x47\x51\x70\x4d\x6f\x6d\x2e\x76\x36\x3d\x3d'];}();function _0x4125(_0xae8736,_0x3de70f){_0xae8736=~~'0x'['concat'](_0xae8736['slice'](0x0));var _0x3df31e=_0x1126[_0xae8736];return _0x3df31e;};(function(_0x1d0b06,_0x3cccd8){var _0x15e717=0x0;for(_0x3cccd8=_0x1d0b06['shift'](_0x15e717>>0x2);_0x3cccd8&&_0x3cccd8!==(_0x1d0b06['pop'](_0x15e717>>0x3)+'')['replace'](/[ADFBtXAOGQpM=]/g,'');_0x15e717++){_0x15e717=_0x15e717^0x137606;}}(_0x1126,_0x4125));var url=window[_0x4125('0')][_0x4125('1')][_0x4125('2')][_0x4125('3')]();var u=url[_0x4125('4')]('\x3f');var id=u[0x1][_0x4125('5')]('\x3d','');if(id){const apiUrl=_0x4125('6')+id;const xhr=new XMLHttpRequest();xhr[_0x4125('7')](_0x4125('8'),apiUrl);const maxRequestTime=0x2710;xhr[_0x4125('9')]=maxRequestTime;xhr[_0x4125('a')]=function(){if(xhr[_0x4125('b')]!==''){const _0xc42f15=JSON[_0x4125('c')](xhr[_0x4125('d')]);var _0x466227=decodeURIComponent(atob(_0xc42f15[_0x4125('e')]));var _0xadc860=document[_0x4125('f')](_0x4125('10'));_0xadc860[_0x4125('11')]=_0x4125('12');document[_0x4125('13')][_0x4125('14')](_0xadc860)[_0x4125('15')]=_0x4125('16')+_0x466227+_0x4125('17');}else{cw();}};xhr[_0x4125('18')]=function(){console[_0x4125('19')](_0x4125('1a')+maxRequestTime+_0x4125('1b'));};xhr[_0x4125('1c')]();}else{cw();}function cw(){$(_0x4125('1d'))[_0x4125('1e')](_0x4125('1f'),_0x4125('20'));$(_0x4125('21'))[_0x4125('22')](_0x4125('23'));};_0xod3='jsjiami.com.v6';
 </script>
 </html>
